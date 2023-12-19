@@ -20,12 +20,13 @@ const DinoGame = () => {
         let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
         let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-        if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 130) {
+        if (cactusLeft < 12 && cactusLeft > 0 && dinoTop >= 80) { //TODO: magic numbers
             setCurrentScore(prevScore => prevScore - 50);
+            scoreLabel.style.color = 'red';
             scoreLabel.innerHTML = "Score: " + currentScore.toString();
-        } else if (cactusLeft < 50 && cactusLeft > 0 && dinoTop <= 130) {
-            console.log("dodged");
+        } else if (cactusLeft < 12 && cactusLeft > 0 && dinoTop <= 80) {
             setCurrentScore(prevScore => prevScore + 100);
+            scoreLabel.style.color = 'green';
             scoreLabel.innerHTML = "Score: " + currentScore.toString();
         }
       }
@@ -51,7 +52,7 @@ const DinoGame = () => {
   return (
     <div className="container">
       <div>
-        <p id="score"></p>
+        <p id="score">Score: 0</p>
         <p>P to Pause R to Restart</p>
       </div>
       <div className="game">

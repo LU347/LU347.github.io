@@ -4,6 +4,7 @@
   margin: 0;
   font-family: "Silkscreen";
   color: #333;
+  background-color: rgb(241, 248, 254);
 }
 
 .navbar {
@@ -11,8 +12,9 @@
   display: flex;
   align-items: center;
   max-width: 800px;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  margin: auto;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .navbar .links {
@@ -52,7 +54,7 @@
 .container {
   margin: auto;
   max-width: 800px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.162);
 }
 
 .game {
@@ -62,11 +64,14 @@
 }
 
 #dino {
-  width: 25px;
-  height: 50px;
-  background-color: black;
+  width: 128px;
+  height: 128px;
   position: relative;
-  top: 150px; 
+  top: 90px; 
+  background-image: url(./images/bluehippo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
 }
 
 .jump {
@@ -75,23 +80,23 @@
 
 @keyframes jump {
   0% {
-    top: 150px;
+    top: 90px;
   }
 
   30% {
-    top: 130px;
-  }
-
-  50% {
     top: 70px;
   }
 
+  50% {
+    top: 30px;
+  }
+
   80% {
-    top: 130px;
+    top: 70px;
   }
 
   100% {
-    top: 150px;
+    top: 90px;
   }
 }
 
