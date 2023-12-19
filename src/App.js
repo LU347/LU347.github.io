@@ -1,14 +1,25 @@
 import Navbar from './Navbar';
-import Home from './Home';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
 
 function App() {
+  let component
+  switch(window.location.pathname) {
+    case "/":
+      component = <Home />
+      break
+    case "/projects":
+      component = <Projects />
+      break
+    default:
+      component = <Home />
+      break
+  }
   return (
-    <div className="App">
-      <Navbar />
-      <div className="content">
-        <Home />
-      </div>
-    </div>
+   <>
+    <Navbar />
+    {component}
+   </>
   );
 }
 

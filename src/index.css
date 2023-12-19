@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Kay+Pho+Du&family=Noto+Serif+Old+Uyghur&family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Inter&family=Lato&family=Silkscreen&display=swap');
 
 * {
   margin: 0;
@@ -13,10 +13,6 @@
   max-width: 800px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
-}
-
-.navbar h1 {
-  color: black;
 }
 
 .navbar .links {
@@ -38,7 +34,84 @@
 }
 
 .content {
+  display: flex;
+  justify-content: center;
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
+}
+
+.description {
+  font-family: "Inter";
+}
+
+.site-title {
+  color: black;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  border: 1px solid black;
+}
+
+.game {
+  display: flex;
+  height: 200px;
+  margin: auto;
+}
+
+#dino {
+  width: 25px;
+  height: 50px;
+  background-color: black;
+  position: relative;
+  top: 150px; 
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+
+  30% {
+    top: 130px;
+  }
+
+  50% {
+    top: 70px;
+  }
+
+  80% {
+    top: 130px;
+  }
+
+  100% {
+    top: 150px;
+  }
+}
+
+#cactus {
+  width: 10px;
+  height: 40px;
+  position: relative;
+  top: 160px;
+  left: 800px;
+
+  background-color: grey;
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 800px;
+  }
+
+  100% {
+    left: 0px;
+  }
 }
