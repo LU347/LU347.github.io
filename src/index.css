@@ -17,7 +17,6 @@
   margin-bottom: 10px;
   border-bottom: 1px solid #181717;
   border-radius: 10px 100px / 120px;
-  background-color: #151515;
 }
 
 .navbar .links {
@@ -33,6 +32,7 @@
   text-decoration: none;
   padding: 6px;
   background-color: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .navbar a:hover {
@@ -61,15 +61,31 @@
 .container {
   margin: auto;
   max-width: 800px;
-  border: 1px solid rgba(0, 0, 0, 0.162);
+  filter: drop-shadow(20px 10px 4px #1a1a1ab2);
+  background-color: transparent;
 }
 
 .game {
-  display: flex;
+  display: block;
   height: 200px;
   margin: auto;
-  background-color: #ffffff;
-  border-radius: 10px;
+  background-color: #3a3a3a49;
+  background-image: radial-gradient(rgba(203, 203, 203, 0.501) 1px, transparent 0);
+  background-size: 40px 40px;
+  border-radius: 25px;
+}
+
+.game-info{
+  display: flex;
+  float: left;
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.041);
+  border-radius: 25px;
+}
+
+.game-info li {
+  margin: 5px;
+  background-color: transparent;
 }
 
 #dino {
@@ -114,14 +130,14 @@
   width: 20px;
   height: 40px;
   position: relative;
-  top: 160px;
+  top: 29px;
   left: 800px;
-
   background-image: url(./images/eiffel-tower.png);
   background-size: 20px 40px;
   background-repeat: no-repeat;
   background-color: transparent;
   image-rendering: pixelated;
+  filter: invert(90%);
   animation: block 2s infinite linear;
 }
 

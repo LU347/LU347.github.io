@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const DinoGame = () => {
   const [currentScore, setCurrentScore] = useState(0);
   const dinoRef = useRef(null);
-  const CACTUS_LEFT_TRESHOLD = 12;
+  const CACTUS_LEFT_TRESHOLD = 25;
   const DINO_TOP_TRESHOLD = 80;
 
   useEffect(() => {
@@ -21,23 +21,24 @@ const DinoGame = () => {
       if (dino !== null && cactus !== null) {
         let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
         let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
-
+        
         if (cactusLeft < CACTUS_LEFT_TRESHOLD && cactusLeft > 0 && dinoTop >= DINO_TOP_TRESHOLD) { //TODO: magic numbers
             setCurrentScore(prevScore => prevScore - 50);
             updateScoreLabel('red', currentScore);
         } else if (cactusLeft < CACTUS_LEFT_TRESHOLD && cactusLeft > 0 && dinoTop <= DINO_TOP_TRESHOLD) {
             setCurrentScore(prevScore => prevScore + 100);
-            updateScoreLabel('green', currentScore);
+            updateScoreLabel('green', currentScore); 
         }
       }
     }, 10);
+
     //TODO: Add Keybind functions
     document.addEventListener("keydown", jump);
 
     function updateScoreLabel(color, value) {
       scoreLabel.style.color = color;
-      scoreLabel.innerHTML = "Score: " + value.toString();
-    }
+      scoreLabel.innerHTML = "Score: " + value.toString() + " ";
+    } 
 
     return () => {
       clearInterval(isAlive);
@@ -56,10 +57,12 @@ const DinoGame = () => {
   }
 
   return (
-    <div className="container">
+    <div class="container">
       <div>
-        <p id="score">Score: 0</p>
-        <p>P to Pause R to Restart</p>
+        <ul class="game-info">
+          <li id="score">Score: 0</li>
+          <li>P to Pause R to Restart</li>
+        </ul>
       </div>
       <div className="game">
         <div id="dino" ref={dinoRef}></div>
