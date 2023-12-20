@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import About from './pages/About';
 
 function App() {
   let component
@@ -10,6 +11,9 @@ function App() {
       break
     case "/projects":
       component = <Projects />
+      break
+    case "/about":
+      component = <About />
       break
     default:
       component = <Home />

@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 const DinoGame = () => {
   const [currentScore, setCurrentScore] = useState(0);
   const dinoRef = useRef(null);
+  const CACTUS_LEFT_TRESHOLD = 12;
+  const DINO_TOP_TRESHOLD = 80;
 
   useEffect(() => {
     let dino = dinoRef.current;
@@ -10,7 +12,7 @@ const DinoGame = () => {
     let scoreLabel = document.getElementById("score");
 
     let isAlive = setInterval(() => {
-      if (dino == null || cactus == null || scoreLabel == null) {
+      if (!dino || !cactus || !scoreLabel) {
         dino = dinoRef.current;
         cactus = document.getElementById("cactus");
         scoreLabel = document.getElementById("score");
@@ -20,19 +22,22 @@ const DinoGame = () => {
         let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
         let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-        if (cactusLeft < 12 && cactusLeft > 0 && dinoTop >= 80) { //TODO: magic numbers
+        if (cactusLeft < CACTUS_LEFT_TRESHOLD && cactusLeft > 0 && dinoTop >= DINO_TOP_TRESHOLD) { //TODO: magic numbers
             setCurrentScore(prevScore => prevScore - 50);
-            scoreLabel.style.color = 'red';
-            scoreLabel.innerHTML = "Score: " + currentScore.toString();
-        } else if (cactusLeft < 12 && cactusLeft > 0 && dinoTop <= 80) {
+            updateScoreLabel('red', currentScore);
+        } else if (cactusLeft < CACTUS_LEFT_TRESHOLD && cactusLeft > 0 && dinoTop <= DINO_TOP_TRESHOLD) {
             setCurrentScore(prevScore => prevScore + 100);
-            scoreLabel.style.color = 'green';
-            scoreLabel.innerHTML = "Score: " + currentScore.toString();
+            updateScoreLabel('green', currentScore);
         }
       }
     }, 10);
     //TODO: Add Keybind functions
     document.addEventListener("keydown", jump);
+
+    function updateScoreLabel(color, value) {
+      scoreLabel.style.color = color;
+      scoreLabel.innerHTML = "Score: " + value.toString();
+    }
 
     return () => {
       clearInterval(isAlive);
@@ -40,8 +45,9 @@ const DinoGame = () => {
     };
   }, [currentScore]);
 
+
   function jump() {
-    if (dinoRef.current.classList !== "jump") {
+    if (!dinoRef.current.classList.contains("jump")) {
       dinoRef.current.classList.add("jump");
       setTimeout(function () {
         dinoRef.current.classList.remove("jump");
