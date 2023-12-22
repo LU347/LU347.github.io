@@ -23,11 +23,19 @@ const DinoGame = () => {
         let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
         
         if (cactusLeft < CACTUS_LEFT_TRESHOLD && cactusLeft > 0 && dinoTop >= DINO_TOP_TRESHOLD) { //TODO: magic numbers
-            setCurrentScore(prevScore => prevScore - 50);
-            updateScoreLabel('red', currentScore);
+            if (currentScore - 50 <= 0) {
+              setCurrentScore(prevScore => 0);
+              updateScoreLabel('red', currentScore);
+            } else {
+              setCurrentScore(prevScore => prevScore - 50);
+              updateScoreLabel('red', currentScore);
+            }
+            
         } else if (cactusLeft < CACTUS_LEFT_TRESHOLD && cactusLeft > 0 && dinoTop <= DINO_TOP_TRESHOLD) {
             setCurrentScore(prevScore => prevScore + 100);
             updateScoreLabel('green', currentScore); 
+        } else {
+            scoreLabel.style.color = 'white';
         }
       }
     }, 10);
@@ -37,7 +45,7 @@ const DinoGame = () => {
 
     function updateScoreLabel(color, value) {
       scoreLabel.style.color = color;
-      scoreLabel.innerHTML = "Score: " + value.toString() + " ";
+      scoreLabel.innerHTML = value.toString() + "&nbsp;";
     } 
 
     return () => {
@@ -57,12 +65,11 @@ const DinoGame = () => {
   }
 
   return (
-    <div class="container">
-      <div>
-        <ul class="game-info">
-          <li id="score">Score: 0</li>
-          <li>P to Pause R to Restart</li>
-        </ul>
+    <div class="game-container">
+      <div class="game-info">
+        <p>Score:&nbsp;</p>
+        <p id="score">0</p>
+        <p>| Any key to jump</p>
       </div>
       <div className="game">
         <div id="dino" ref={dinoRef}></div>
