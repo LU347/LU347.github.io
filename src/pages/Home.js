@@ -1,9 +1,7 @@
 import React from 'react';
 import DinoGame from '../DinoGame.js';
-import MusicActivity from './MusicActivity.js';
 
 const Home = () => {
-    //TODO: Add more content and functionality to button
     return (  
         <div className="home">
             <DinoGame />
@@ -14,7 +12,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div class="container">
-                    <button>Portfolio →</button> 
+                    <a href="/projects" class="link">Projects ➤</a>
                 </div>
             </div>
         </div>
