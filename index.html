@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Elisha Lucile Ong-Aspiring SWE</title>
+</head>
+<body>
     <div class="nav-wrapper">
-        <nav>
+        <nav class="nav-desktop">
             <ul>
                 <li><h1 class="nav-title">Elisha Lucile Ong</h1></li>
                 <li><a href="#">About</a></li>
@@ -15,19 +17,38 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <nav class="nav-mobile">
+            <ul>
+                <li><h1 class="nav-title">EO</h1></li>
+                <li>
+                    <img src="assets/icons/menu_icon.svg" alt="Sidebar icon">
+                </li>
+            </ul>
+        </nav>
     </div>
-</head>
-<body>
     <section class="bio-wrapper">
         <div class="bio">
-            <div>
-                <p>Hello World</p>
-                <p>I'm an aspiring <strong>Software Engineer</strong> interested in <strong>full-stack</strong> development</p>
+            <div class="typer-wrapper">
+                <span
+                    class="typer" 
+                    id="main" 
+                    data-words="Hello World" 
+                    data-delay="100" 
+                    data-deleteDelay="2000"
+                    data-colors="#e0e0e0d6">
+                </span>
+                <span class="cursor" data-owner="main"></span>
+                <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+                <p>I'm an aspiring <strong>Software Engineer</strong> interested in <strong>full-stack</strong> development
+                and <strong>game development.</strong></p>
             </div> 
         </div>
         <div class="spline-container">
             <spline-viewer url="https://prod.spline.design/lZoCE8G4v6gQ9KLS/scene.splinecode"></spline-viewer>
         </div>
+    </section>
+    <section>
+        <p>testing</p>
     </section>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
 </body>
