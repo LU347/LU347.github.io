@@ -1,0 +1,241 @@
+
+html, body {
+    background-color: black;
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color:#f5f5f5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    max-width: 1200px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav li:first-of-type {
+    display: block;
+    float: left;
+    margin-right: auto;
+}
+
+.nav-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 2rem;
+    color: #f5f5f5ea;
+}
+
+nav li {
+    float: right;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+}
+
+nav a {
+    color: #e0e0e0d6;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+nav a:hover {
+    color: white;
+    font-weight: 500;
+}
+
+.bio-wrapper {
+    display: grid;
+    grid-template-columns: auto 50%;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bio p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #e0e0e0d6;
+    font-size: 1.5rem;
+    text-wrap: balanced;
+    line-height: 2.5;
+    font-weight: 100;
+}
+
+.typer-wrapper {
+    font-size: 1.5rem;
+}
+
+.spline-container {
+    height: 40vh;
+    z-index: 1;
+    /*
+    border: #e0e0e0d6;
+    border-style: solid;
+    border-width: 10px;
+    */
+}
+
+.spline-container:before {
+    z-index: -1;
+}
+
+strong {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: #f5f5f5ea;
+}
+
+@media (max-width: 600px) {
+    /* mobile
+        hide spline scene  
+    */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-title {
+        font-size: 1.3rem;
+    }
+
+    nav li:first-of-type {
+        margin: 0.5rem 0;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* tablet
+        navbar should be hidden
+        hide spline scene 
+    */ 
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.75rem 0;
+    }
+
+    .nav-title {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    nav li:first-of-type {
+        margin: 0.5rem 0;
+    }
+
+    nav a {
+        font-size : 1.125rem;
+    }
+
+    .spline-container {
+        display: none;
+        visibility: hidden;
+    }
+
+    .bio-wrapper {
+        grid-template-columns: 100%;
+    }
+
+    .nav-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        visibility: visible;
+        margin: 0.625rem;
+    }
+
+    .nav-mobile ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav-mobile li {
+        margin: 0 0.5rem;
+    }
+
+    .nav-desktop {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 769px) {
+    /* desktop screens */
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav li {
+        margin: 0 1rem;
+    }
+    
+    nav a {
+        font-size: 1.25rem;
+    }
+
+    .nav-mobile {
+        display: none;
+        visibility: hidden;
+    }
+}
