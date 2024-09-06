@@ -163,13 +163,14 @@ strong {
     z-index: 4;
     translate: -300px -50px;
     rotate: -5deg;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.285);
 }
 
 #card-2 {
     z-index: 3;
-    /* translate: 16rem -6.25rem; */
     translate: 255px -75px;
     rotate: 5deg;
+    box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.285);
 }
 
 #card-3 {
@@ -184,6 +185,7 @@ strong {
     padding: 0.9rem;
     padding-bottom: 2rem;
     transition: all .2s ease-in-out;
+    padding-bottom: 4.5rem;
 }
 
 .card img {
