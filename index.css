@@ -19,6 +19,7 @@ section {
     height: 60vh;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 ul {
@@ -125,6 +126,47 @@ strong {
     color: #f5f5f5ea;
 }
 
+#about-link {
+    text-decoration: none;
+    color: #f5f5f5ea;
+    background-color: rgb(11, 11, 11);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#about-link:hover {
+    background-color: #f5f5f5ea;
+    color: black;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+}
+
+.icon {
+    height: 1.65rem;
+    width: auto;
+    transition: all .2s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}
+
+/*Media Queries */
 @media (max-width: 600px) {
     /* mobile
         hide spline scene  
