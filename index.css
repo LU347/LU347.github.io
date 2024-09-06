@@ -132,16 +132,52 @@ strong {
 
 .about-wrapper {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 50%;
     gap: 1rem;
     padding-bottom: 2rem;
 }
 
-.card {
-    background-color: #f5f5f5;
+.about-bio {
+    z-index: 6;
     margin: auto;
-    padding: 15px;
-    padding-bottom: 65px;
+    padding: 2rem;
+}
+
+.about-bio h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-bio p {
+    line-height: 1.6rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+#card-1 {
+    z-index: 4;
+    translate: -18rem -6.25rem;
+}
+
+#card-2 {
+    z-index: 3;
+    translate: 16rem -6.25rem;
+}
+
+#card-3 {
+    z-index: 2;
+}
+
+.card {
+    position: absolute;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0.9rem;
+    padding-bottom: 2rem;
     transition: all .2s ease-in-out;
 }
 
