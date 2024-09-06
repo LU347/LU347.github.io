@@ -155,21 +155,26 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    scale: 0.9;
 }
+
 
 #card-1 {
     z-index: 4;
-    translate: -18rem -6.25rem;
+    translate: -300px -50px;
+    rotate: -5deg;
 }
 
 #card-2 {
     z-index: 3;
-    translate: 16rem -6.25rem;
+    /* translate: 16rem -6.25rem; */
+    translate: 255px -75px;
+    rotate: 5deg;
 }
 
 #card-3 {
     z-index: 2;
+    rotate: -1deg;
 }
 
 .card {
@@ -329,7 +334,11 @@ footer {
     }
 
     .about-wrapper {
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
 
