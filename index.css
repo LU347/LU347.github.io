@@ -21,6 +21,7 @@ section {
     padding: 0;
     width: 100%;
     height: 85%;
+    scroll-behavior:smooth; /* not working? */
 }
 
 ul {
@@ -131,8 +132,9 @@ strong {
 
 .about-wrapper {
     display: grid;
-    grid-template-columns: 30% 40%;
+    grid-template-columns: 50% 50%;
     gap: 1rem;
+    padding-bottom: 2rem;
 }
 
 .card {
