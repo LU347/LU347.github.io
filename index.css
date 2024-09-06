@@ -261,6 +261,10 @@ footer {
         display: none;
         visibility: hidden;
     }
+
+    .icon {
+        height: 1rem;
+    }
 }
 
 @media (min-width: 769px) {
