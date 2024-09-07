@@ -198,9 +198,8 @@ nav a:hover {
   background-color: var(--card-background-color);
   margin: 0;
   padding: 0.9rem;
-  padding-bottom: 2rem;
   transition: all 0.35s ease-in-out;
-  padding-bottom: 4.5rem;
+  padding-bottom: 5.5rem;
 }
 
 .card img {
