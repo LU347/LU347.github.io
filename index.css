@@ -10,6 +10,7 @@
   --card-shadow: 10px 5px 5px rgba(0, 0, 0, 0.285);
   scroll-behavior: smooth !important;
 }
+
 html,
 body {
   background-color: black;
@@ -337,6 +338,19 @@ footer {
     padding-bottom: 10vh;
     display: flex;
     flex-direction: row;
+  }
+
+  #card-3 {
+    translate: 25vw -10vw;
+    rotate: 20deg;
+  }
+
+  #card-2 {
+    translate: 10vw -5vw;
+  }
+
+  #card-1 {
+    translate: -20vw;
   }
 }
 
