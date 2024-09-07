@@ -1,13 +1,13 @@
 :root {
-    /* TODO: Dark Mode & Light Mode */
-    --primary-color: #e0e0e0d6;
-    --background: #00000000;
-    --primary-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    --header-font: Georgia, "Times New Roman", Times, serif;
-    --header-color: #f5f5f5ea;
-    --card-background-color: #f5f5f5;
-    --card-shadow: 10px 5px 5px rgba(0, 0, 0, 0.285);
+  /* TODO: Dark Mode & Light Mode */
+  --primary-color: #e0e0e0d6;
+  --background: #00000000;
+  --primary-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --header-font: Georgia, "Times New Roman", Times, serif;
+  --header-color: #f5f5f5ea;
+  --card-background-color: #f5f5f5;
+  --card-shadow: 10px 5px 5px rgba(0, 0, 0, 0.285);
 }
 html,
 body {
@@ -35,17 +35,21 @@ section {
   scroll-behavior: smooth; /* not working? */
 }
 
+h1 {
+  font-family: var(--header-font);
+  color: var(--header-color);
+}
+
+strong {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  color: var(--header-color);
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 nav {
@@ -62,13 +66,6 @@ nav li:first-of-type {
   display: block;
   float: left;
   margin-right: auto;
-}
-
-.nav-title {
-  font-family: var(--header-font);
-  font-weight: 100;
-  font-size: 2rem;
-  color: #f5f5f5ea;
 }
 
 nav li {
@@ -90,6 +87,20 @@ nav a:hover {
   color: white;
   font-weight: 400;
   transform: scale(1.1);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-title {
+  font-family: var(--header-font);
+  font-weight: 100;
+  font-size: 2rem;
+  color: var(--header-color);
 }
 
 .bio-wrapper {
@@ -130,27 +141,17 @@ nav a:hover {
   z-index: -1;
 }
 
-strong {
-  font-family: var(--primary-font);
-  font-weight: 600;
-  color: var(--header-color);
-}
-
 .about-wrapper {
   display: grid;
-  grid-template-columns: 60% 50%;
+  grid-template-columns: 60% 40%;
   gap: 1rem;
   padding-bottom: 2rem;
 }
 
 .about-bio {
   z-index: 6;
-  margin: auto;
-  padding: 2rem;
-}
-
-.about-bio h1 {
-  font-family: var(--header-font);
+  margin: 0;
+  padding: 1rem;
 }
 
 .about-bio p {
@@ -161,7 +162,7 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
-  scale: 0.9;
+  scale: 0.8;
 }
 
 #card-1 {
@@ -326,15 +327,15 @@ footer {
   }
 
   .about-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: auto;
     width: 100%;
   }
 
   .card-container {
     scale: 0.7;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
   }
 }
 
