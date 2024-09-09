@@ -14,11 +14,10 @@
 html,
 body {
   background-color: black;
-  margin: 0 auto;
-  padding: 0 auto;
+  margin: auto;
+  padding: 0;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
   color: var(--primary-color);
   font-family: var(--primary-font);
   font-weight: 100;
@@ -26,15 +25,21 @@ body {
 }
 
 section {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 85%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   scroll-behavior: smooth; /* not working? */
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -50,8 +55,6 @@ strong {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 nav {
@@ -109,8 +112,10 @@ nav a:hover {
   display: grid;
   grid-template-columns: auto 50%;
   gap: 1rem;
+  /*
   margin: 2rem;
   padding: 2rem;
+  */
   align-items: center;
 }
 
@@ -146,8 +151,7 @@ nav a:hover {
 .about-wrapper {
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 1rem;
-  height: 100%;
+  gap: 3rem;
 }
 
 .about-bio {
@@ -158,6 +162,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-shrink: inherit;
 }
 
 .about-bio p {
@@ -168,10 +173,12 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .card-container > * {
   scale: 0.8;
+  transform: translate(0);
 }
 
 #card-1 {
@@ -208,10 +215,12 @@ nav a:hover {
 }
 
 footer {
+  flex-shrink: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  padding-bottom: 3rem;
+  flex-direction: row;
+  padding: 2rem;
 }
 
 .social-links {
@@ -219,7 +228,8 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 25%;
+  min-width: 25%;
+  max-width: 50%;
 }
 
 .icon {
@@ -259,8 +269,9 @@ footer {
     padding: 0.5rem;
   }
 
-  .about-bio {
-    overflow:hidden;
+  .card-container > * {
+    scale: 0.7;
+    transform: translateY(-2vw);
   }
 }
 
@@ -341,6 +352,8 @@ footer {
   .about-wrapper {
     grid-template-columns: auto;
     width: 100%;
+    min-height: 100vh;
+    display: block;
   }
 
   .card-container {
