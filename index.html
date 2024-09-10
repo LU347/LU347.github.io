@@ -19,16 +19,27 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <nav class="nav-mobile">
+        <nav class="nav-mobile" id="nav-mobile">
             <ul>
                 <li><h1 class="nav-title">EO</h1></li>
-                <li>
+                <li id="open-sidebar-button">
                     <img src="assets/icons/menu_icon.svg" alt="Sidebar icon">
                 </li>
             </ul>
         </nav>
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li id="close-sidebar-button">
+                    <img src="assets/icons/menu_icon.svg" alt="Sidebar icon">
+                </li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="docs/Resume.pdf" target="_blank" rel="noreferrer noopener">Résumé</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </div>
-    <section class="bio-wrapper">
+    <section class="bio-wrapper" style="background-color: blue;">
         <div class="bio">
             <div class="typer-wrapper">
                 <span
@@ -48,31 +59,56 @@
             <spline-viewer url="https://prod.spline.design/lZoCE8G4v6gQ9KLS/scene.splinecode"></spline-viewer>
         </div>
     </section>
-    <section id="about">
-        <div class="about-wrapper">
-            <div class="card-container">
-                <div class="card" id="card-1">
-                    <img src="assets/images/about-1.jpg">
-                </div>
-                <div class="card" id="card-2">
-                    <img src="assets/images/about-2.jpg">
-                </div>
-                <div class="card" id="card-3">
-                    <img src="assets/images/about-3.jpg">
-                </div>
+    <section id="about"  class="about-wrapper" style="background-color: rgb(102, 0, 255);">
+        <div class="card-container">
+            <div class="card" id="card-1">
+                <img src="assets/images/about-1.jpg">
             </div>
-            <div class="about-bio">
-                <h1>A little bit about me...</h1>
-                <p>
-                    Since childhood, I’ve been fascinated by technology—whether it was playing Super Mario on my Game Boy, tinkering with a red floppy disk, or exploring flash games on the internet. After moving to the United States, my family gifted me a small Linux laptop, which sparked my love for computers.
-                </p>
-                <p>
-                    In high school, I learned basic electronics and was introduced to HTML and CSS, further fueling my passion for technology. Over time, this curiosity blossomed into a love for programming. There's something deeply satisfying about transforming a blank page into a fully developed app or website.
-                </p>
-                <p>
-                    Though I explored several career paths at UTSA, I’ve found my calling in Full-Stack development. It may have taken time to get here, but I’m excited about what the future holds.
-                </p>
+            <div class="card" id="card-2">
+                <img src="assets/images/about-2.jpg">
             </div>
+            <div class="card" id="card-3">
+                <img src="assets/images/about-3.jpg">
+            </div>
+        </div>
+        <div class="about-bio">
+            <h1>A little bit about me...</h1>
+            <p>
+                Since childhood, I’ve been fascinated by technology—whether it was playing Super Mario on my Game Boy, tinkering with a red floppy disk, or exploring flash games on the internet. After moving to the United States, my family gifted me a small Linux laptop, which sparked my love for computers.
+            </p>
+            <p>
+                In high school, I learned basic electronics and was introduced to HTML and CSS, further fueling my passion for technology. Over time, this curiosity blossomed into a love for programming. There's something deeply satisfying about transforming a blank page into a fully developed app or website.
+            </p>
+            <p>
+                Though I explored several career paths at UTSA, I’ve found my calling in Full-Stack development. It may have taken time to get here, but I’m excited about what the future holds.
+            </p>
+        </div>
+    </section>
+    <section class="skills-wrapper" style="background-color: rgba(0, 128, 0, 0.236);">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <h2>Languages</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Lua</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div class="skils-container">
+            <h2>Miscellaneous</h2>
+            <ul class="skills-list">
+                <li>AWS EC2</li>
+                <li>MySQL</li>
+                <li>Git</li>
+                <li>Unity</li>
+                <li>DevOps</li>
+                <li>Pixel Art</li>
+                <li>Game Development</li>
+            </ul>
         </div>
     </section>
     <footer>
@@ -85,6 +121,7 @@
     </div>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
     <script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
 

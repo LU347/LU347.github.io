@@ -242,6 +242,57 @@ footer {
   transform: scale(1.5);
 }
 
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.skills-list > li {
+  margin: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10rem;
+  height: 100vh; /* Full height of the viewport */
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 1.5rem;
+  z-index: 7;
+  display: none;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: start;
+}
+
+.sidebar li:first-of-type {
+  margin-right: auto;
+}
+.sidebar li {
+  margin: 2rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
 /*Media Queries */
 @media (max-width: 600px) {
   /* mobile
