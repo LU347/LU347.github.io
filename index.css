@@ -291,9 +291,16 @@ footer {
 
 .sidebar a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar a:hover {
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--header-color);
 }
 
 /*Media Queries */
