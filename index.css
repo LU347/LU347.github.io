@@ -257,6 +257,9 @@ footer {
 
 .skills-list > li {
   margin: 10px;
+  padding: 10px;
+  border-radius: 2.5px;
+  background-color: #0a0a0ad6;
 }
 
 .sidebar {
