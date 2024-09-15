@@ -242,26 +242,6 @@ footer {
   transform: scale(1.5);
 }
 
-.skills-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-
-.skills-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.skills-list > li {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 2.5px;
-  background-color: #0a0a0ad6;
-}
-
 .sidebar {
   position: fixed;
   top: 0;
