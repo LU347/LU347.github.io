@@ -11,7 +11,6 @@ closeSidebarButton.addEventListener("click", (e) => {
     sidebar.style.display = "none";
 })
 
-
 var projectJSON = "./lib/projects.json"
 var projectsContainer = document.getElementById("projects-container")
 
