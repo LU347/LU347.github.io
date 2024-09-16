@@ -1,30 +1,30 @@
 [
     {
         "name": "Astronomy Photo of the Day Showcase",
-        "description": "",
-        "link": "",
+        "description": "A simple webpage using NASA's APOD API.",
+        "link": "https://github.com/LU347/NASA-Showcase",
         "tech_stack": ["React", "Vite", "Vercel"],
         "image": "/assets/images/project-thumbnails/SaturnMoon.jpg"
     },
     {
         "name": "Equipment Inventory Manager",
-        "description": "",
-        "link": "",
+        "description": "A class project that lets users create, update, view, and search equipiment inventory.",
+        "link": "https://github.com/LU347/CS-4783-External-Site",
         "tech_stack": ["HTML", "CSS", "PHP", "AWS", "MySQL"],
-        "image": ""
+        "image": "/assets/images/project-thumbnails/placeholder.webp"
     },
     {
         "name": "All Fangs on Deck",
-        "description": "",
-        "link": "",
+        "description": "A side scrolling platformer to demonstrate UI/UX",
+        "link": "https://github.com/NicoletteAL/All-Fangs-On-Deck",
         "tech_stack": ["C#", "Unity"],
         "image": "/assets/images/project-thumbnails/AFoD.png"
     },
     {
         "name": "Botanical Buddies",
-        "description": "",
-        "link": "",
-        "tech_stack": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Microsoft Azure"],
-        "image": ""
+        "description": "A fake e-commerce website that sold different types of foliage",
+        "link": "https://github.com/LU347/Botanical-Buddies",
+        "tech_stack": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        "image": "/assets/images/project-thumbnails/placeholder.webp"
     }
 ]
