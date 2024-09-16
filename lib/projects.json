@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Astronomy Photo of the Day Showcase",
+        "description": "",
+        "link": "",
+        "tech_stack": ["React", "Vite", "Vercel"],
+        "image": "/assets/images/project-thumbnails/SaturnMoon.jpg"
+    },
+    {
+        "name": "Equipment Inventory Manager",
+        "description": "",
+        "link": "",
+        "tech_stack": ["HTML", "CSS", "PHP", "AWS", "MySQL"],
+        "image": ""
+    },
+    {
+        "name": "All Fangs on Deck",
+        "description": "",
+        "link": "",
+        "tech_stack": ["C#", "Unity"],
+        "image": "/assets/images/project-thumbnails/AFoD.png"
+    },
+    {
+        "name": "Botanical Buddies",
+        "description": "",
+        "link": "",
+        "tech_stack": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Microsoft Azure"],
+        "image": ""
+    }
+]
