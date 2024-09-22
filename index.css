@@ -311,6 +311,7 @@ footer {
   transition: all 0.4s ease-in-out;
   max-width: 450px;
   margin: auto;
+  position: relative;
 }
 
 .project-card:hover {
@@ -367,6 +368,13 @@ footer {
   background-color: #202020;
   border-radius: 0.2rem;
 }
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
 /*Media Queries */
 @media (max-width: 600px) {
   /* mobile

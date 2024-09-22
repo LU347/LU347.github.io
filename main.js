@@ -14,6 +14,8 @@ closeSidebarButton.addEventListener("click", (e) => {
 var projectJSON = "./lib/projects.json"
 var projectsContainer = document.getElementById("projects-container")
 
+var liveIconURL = "./assets/images/live-icon.png";
+
 fetch(projectJSON)
     .then((res) => {
         if (!res.ok) {
@@ -55,6 +57,33 @@ function createProjectCard(data) {
         element.innerText = tech
         tech_list.appendChild(element)
     });
+
+    if ("live_link" in data) {
+        var liveLink = document.createElement("a");
+        liveLink.setAttribute("href", `${data.live_link}`);
+        liveLink.setAttribute("target", "_blank");
+        liveLink.setAttribute("rel", "noreferrer noopener");
+
+        var liveIconImage = document.createElement("img");
+        liveIconImage.classList.add("live-icon");
+        
+        liveIconImage.setAttribute("alt", "Live icon image");
+        liveIconImage.setAttribute("src", liveIconURL);
+        
+        //Breaks when I transfer this to index.css
+        liveIconImage.style.filter = "drop-shadow(0 0 1rem #00ff44)"
+        liveIconImage.style.margin = "0.5rem";
+        liveIconImage.style.height = "45px";
+        liveIconImage.style.width = "45px";
+        liveIconImage.style.position = "absolute";
+        liveIconImage.style.top = 0;
+        liveIconImage.style.left = 0;
+        liveIconImage.style.zIndex = 10;
+        liveIconImage.style.animation = "blink 1.5s steps(5, start) infinite";
+
+        liveLink.appendChild(liveIconImage);
+        card.appendChild(liveLink);
+    }
     
     projectInfo.appendChild(tech_list)
     card.appendChild(projectInfo)
