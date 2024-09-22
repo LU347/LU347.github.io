@@ -1,10 +1,19 @@
 [
     {
+        "name": "Chef RPG Ingredients Map",
+        "description": "An interactive map for the game Chef RPG",
+        "link": "https://github.com/LU347/chef-rpg-ingredients-map",
+        "tech_stack": ["React", "Leaflet", "Vite", "Vercel"],
+        "image": "/assets/images/project-thumbnails/chefRPG.png",
+        "live_link": "https://chef-rpg-ingredients-map.vercel.app/"
+    },
+    {
         "name": "Astronomy Photo of the Day Showcase",
         "description": "A simple webpage using NASA's APOD API.",
         "link": "https://github.com/LU347/NASA-Showcase",
         "tech_stack": ["React", "Vite", "Vercel"],
-        "image": "/assets/images/project-thumbnails/SaturnMoon.jpg"
+        "image": "/assets/images/project-thumbnails/SaturnMoon.jpg",
+        "live_link": "https://nasa-showcase-two.vercel.app/"
     },
     {
         "name": "Equipment Inventory Manager",
