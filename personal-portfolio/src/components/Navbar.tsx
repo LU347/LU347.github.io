@@ -10,8 +10,8 @@ function Navbar() {
 
     return (
         <>
-            <nav className="flex items-center justify-between bg-black flex-wrap m-auto p-6">
-                <div className="text-xl lg:text-3xl text-white font-medium font-serif pointer-events-none">
+            <nav className="flex items-center justify-between bg-black flex-wrap m-auto p-12">
+                <div className="ml-8 text-2xl lg:text-4xl text-white font-thin font-serif pointer-events-none">
                     <span>Elisha Lucile Ong</span>
                 </div>
                 <div className="block lg:hidden">
@@ -23,7 +23,7 @@ function Navbar() {
                     </button>
                 </div>
                 <div className="w-full hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto">
-                    <div className="text-md lg:text-xl lg:flex-grow flex justify-end font-extralight font-sans">
+                    <div className="text-xl lg:text-xl lg:flex-grow flex justify-end font-extralight font-sans">
                         <a href="#about" className="m-4 hover:font-medium hover:text-2xl transition-all">
                             About
                         </a>
