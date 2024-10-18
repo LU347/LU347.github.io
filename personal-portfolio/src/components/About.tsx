@@ -2,8 +2,8 @@ import CardContainer from "./CardContainer";
 
 function About() {
   return (
-    <section className="bg-green-500 h-screen flex flex-col w-full">
-      <div className="bg-slate-300 h-1/2">
+    <section id="#about" className="h-screen flex flex-col w-full">
+      <div className="h-auto pb-4">
         <CardContainer />
       </div>
       <div className="bg-slate-500 h-1/2">
