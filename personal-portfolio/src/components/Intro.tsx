@@ -7,7 +7,7 @@ function Intro() {
   }
 
   return (
-    <section id="about" className="flex flex-center items-center h-screen lg:grid-cols-2 gap-2 pb-8">
+    <section className="flex flex-center items-center h-screen lg:grid-cols-2 gap-2 pb-8">
       <div className="h-full w-full lg:w-1/2 flex flex-col font-sans justify-center text-start m-8 font-thin">
         <div className="m-6 leading-loose text-2xl">
           <TypeIt

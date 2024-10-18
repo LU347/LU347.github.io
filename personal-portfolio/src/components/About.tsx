@@ -2,7 +2,7 @@ import CardContainer from "./CardContainer";
 
 function About() {
   return (
-    <section id="#about" className="h-screen flex flex-col w-full">
+    <section id="about" className="h-screen flex flex-col w-full">
       <div className="h-auto pb-4">
         <CardContainer />
       </div>
