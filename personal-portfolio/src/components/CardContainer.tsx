@@ -6,7 +6,7 @@ import Philippines from "../assets/card-images/about-3.jpg";
 
 function CardContainer() {
     return (
-        <div className="hidden lg:flex flex-row justify-center align-center m-12">
+        <div className="flex flex-row justify-center align-center m-12">
             <Card rotation="-5" xOffset="5" yOffset="0" zIndex="2" imageURL={ BookStoreImage }/>
             <Card rotation="0" xOffset="0" yOffset="3.5" zIndex="1" imageURL={ Philippines }/>
             <Card rotation="5" xOffset="-5" yOffset="-0.5" zIndex="3" imageURL={ MonsieurMignon }/>
