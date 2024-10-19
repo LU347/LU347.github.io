@@ -9,15 +9,15 @@ function Intro() {
   return (
     <section className="flex h-screen pb-8 relative">
       <div className="h-3/4 w-full flex flex-center items-center justify-center font-sans justify-start text-start m-8 font-thin">
-        <div className="m-2 leading-loose text-3xl lg:text-4xl z-10">
-          <p className="text-6xl lg:text-8xl font-semibold">ELISHA LUCILE ONG</p>
+        <div className="z-10 w-full flex flex-col justify-center items-center">
+          <p className="m-8 text-6xl lg:text-6xl font-medium">ELISHA LUCILE ONG</p>
           <TypeIt
             options={{
               speed: 150,
               waitUntilVisible: true,
               loop: true,
             }}
-            className="text-slate-200"
+            className="m-8 text-3xl lg:text-4xl text-slate-200"
             >
             an aspiring software engineer
           </TypeIt>
