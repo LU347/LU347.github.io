@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import Resume from "../docs/Resume.pdf";
-import Icon from "../../public/among-us.svg";
 
 function Navbar() {
     const [isToggled, setToggle] = useState(false);
