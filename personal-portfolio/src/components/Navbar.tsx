@@ -41,7 +41,7 @@ function Navbar() {
             </nav>
             <div className="w-full lg:hidden">
                 {isToggled ?
-                    <div className="w-1/2 absolute h-screen flex flex-col text-end right-0 text-2xl font-sans font-extralight z-40">
+                    <div className="w-1/2 absolute h-screen flex flex-col justify-start text-end right-4 text-2xl font-sans font-extralight mt-[8rem] z-40">
                         <a href="#about" className="m-4 pr-4 hover:font-medium hover:text-2xl transition-all">
                             About
                         </a>
