@@ -7,7 +7,8 @@ function Card(props: any) {
             translateY(${props.yOffset}rem)
             rotate(${props.rotation}deg)
         `,
-        boxShadow: `0px 10px 30px rgba(0, 0, 0, 0.285)`
+        boxShadow: `0px 10px 30px rgba(0, 0, 0, 0.285)`,
+        backgroundColor: '#d8c3ffdb'
     };
     
     return (

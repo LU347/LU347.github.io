@@ -13,7 +13,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="flex items-center justify-end lg:justify-center flex-wrap p-12">
+            <nav className="absolute w-full z-10 flex items-center justify-end lg:justify-center flex-wrap p-12">
                 <div className="block lg:hidden">
                     <button
                         className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
@@ -41,7 +41,7 @@ function Navbar() {
             </nav>
             <div className="w-full lg:hidden">
                 {isToggled ?
-                    <div className="w-1/2 absolute h-screen flex flex-col text-end right-0 text-2xl font-sans font-extralight -mt-4 z-40">
+                    <div className="w-1/2 absolute h-screen flex flex-col text-end right-0 text-2xl font-sans font-extralight z-40">
                         <a href="#about" className="m-4 pr-4 hover:font-medium hover:text-2xl transition-all">
                             About
                         </a>
