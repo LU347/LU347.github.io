@@ -7,25 +7,24 @@ function Intro() {
   }
 
   return (
-    <section className="flex flex-center items-center h-screen lg:grid-cols-2 gap-2 pb-8">
-      <div className="h-full w-full lg:w-1/2 flex flex-col font-sans justify-center text-start m-8 font-thin">
-        <div className="m-6 leading-loose text-2xl">
+    <section className="flex h-screen pb-8 relative">
+      <div className="h-3/4 w-full flex flex-center items-center justify-center font-sans justify-start text-start m-8 font-thin">
+        <div className="m-2 leading-loose text-3xl lg:text-4xl z-10">
+          <p className="text-6xl lg:text-8xl font-semibold">ELISHA LUCILE ONG</p>
           <TypeIt
             options={{
               speed: 150,
               waitUntilVisible: true,
               loop: true,
             }}
-          >
-            Hello World
+            className="text-slate-200"
+            >
+            an aspiring software engineer
           </TypeIt>
-          <p>
-            I'm an aspiring <SuperStrong>Software Engineer</SuperStrong> focusing on <SuperStrong>web development</SuperStrong> technologies.
-          </p>
         </div>
       </div>
-      <div className="h-full hidden lg:block lg:w-1/2">
-        <Spline scene="https://prod.spline.design/lZoCE8G4v6gQ9KLS/scene.splinecode" />
+      <div className="h-full absolute w-full z-0 opacity-35 blurred-edges">
+        <Spline scene="https://prod.spline.design/IVXSBx-yfu2q3axz/scene.splinecode" />
       </div>
     </section>
   )

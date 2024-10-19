@@ -35,3 +35,26 @@ body {
   height: 100vh;
   max-width: 1280px;
 }
+
+.blurred-edges::before,
+.blurred-edges::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.blurred-edges::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.blurred-edges::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; 
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0) 0%, rgba(0, 0, 0, 1) 80%);
+}
