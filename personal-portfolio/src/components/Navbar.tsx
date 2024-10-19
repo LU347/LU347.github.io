@@ -13,7 +13,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="absolute w-full z-10 flex items-center justify-end lg:justify-center flex-wrap p-12">
+            <nav className="absolute left-0 w-full z-10 flex items-center justify-end lg:justify-center flex-wrap p-12">
                 <div className="block lg:hidden">
                     <button
                         className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"

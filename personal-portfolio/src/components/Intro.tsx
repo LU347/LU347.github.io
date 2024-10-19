@@ -4,7 +4,7 @@ import TypeIt from "typeit-react";
 function Intro() {
   
   return (
-    <section className="flex h-screen pb-8 relative">
+    <section className="flex h-screen pb-8 relative flex flex-center justify-center items-center">
       <div className="h-full w-full flex flex-center items-center justify-center font-sans justify-start text-start m-8 font-thin">
         <div className="z-10 w-full flex flex-col justify-center items-center pointer-events-none">
           <p className="m-2 text-6xl pb-8 lg:text-6xl font-semibold">ELISHA LUCILE ONG</p>
