@@ -2,8 +2,8 @@ import React from 'react'
 
 function Projects() {
   return (
-    <section className="h-screen bg-slate-500 grid lg:grid-cols-2 grid-col-1">
-
+    <section className="h-screen grid grid-col-1">
+      <h1 className="h-full w-full flex justify-center items-center text-3xl">WIP</h1>
     </section>
   )
 }
