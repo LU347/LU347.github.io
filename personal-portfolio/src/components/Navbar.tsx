@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Resume from "../docs/Resume.pdf";
+
 function Navbar() {
     const [isToggled, setToggle] = useState(false);
 
@@ -10,10 +12,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="flex items-center justify-between bg-black flex-wrap m-auto p-12">
-                <div className="ml-8 text-2xl lg:text-4xl text-white font-thin font-serif pointer-events-none">
-                    <span>Elisha Lucile Ong</span>
-                </div>
+            <nav className="absolute left-0 w-full z-10 flex items-center justify-end lg:justify-center flex-wrap p-12">
                 <div className="block lg:hidden">
                     <button
                         className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
@@ -23,14 +22,14 @@ function Navbar() {
                     </button>
                 </div>
                 <div className="w-full hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto">
-                    <div className="text-xl lg:text-xl lg:flex-grow flex justify-end font-extralight font-sans">
+                    <div className="text-xl lg:flex-grow flex justify-center font-extralight font-sans">
                         <a href="#about" className="m-4 hover:font-medium hover:text-2xl transition-all">
                             About
                         </a>
                         <a href="#projects" className="m-4 hover:font-medium hover:text-2xl transition-all">
                             Projects
                         </a>
-                        <a href="#resume" className="m-4 hover:font-medium hover:text-2xl transition-all">
+                        <a href={Resume} target="_blank" rel="noopener noreferrer" className="m-4 hover:font-medium hover:text-2xl transition-all">
                             Résumé
                         </a>
                         <a href="#contact" className="m-4 hover:font-medium hover:text-2xl transition-all">
@@ -41,14 +40,14 @@ function Navbar() {
             </nav>
             <div className="w-full lg:hidden">
                 {isToggled ?
-                    <div className="w-1/2 absolute h-screen flex flex-col text-end right-0 text-2xl font-sans font-extralight bg-black ml-auto">
+                    <div className="w-1/2 absolute h-screen flex flex-col justify-start text-end right-4 text-2xl font-sans font-extralight mt-[8rem] z-40">
                         <a href="#about" className="m-4 pr-4 hover:font-medium hover:text-2xl transition-all">
                             About
                         </a>
                         <a href="#projects" className="m-4 pr-4 hover:font-medium hover:text-2xl transition-all">
                             Projects
                         </a>
-                        <a href="#resume" className="m-4 pr-4 hover:font-medium hover:text-2xl transition-all">
+                        <a href="" className="m-4 pr-4 hover:font-medium hover:text-2xl transition-all">
                             Résumé
                         </a>
                         <a href="#contact" className="m-4 pr-4 hover:font-medium hover:text-2xl transition-all">

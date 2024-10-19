@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,6 +15,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth !important;
 }
 
 * {
@@ -24,7 +27,7 @@
 
 html {
   width: 100vw;
-  background-color: red;
+  background-color: #00000;
 }
 
 body {
@@ -32,4 +35,34 @@ body {
   background-color: black;
   height: 100vh;
   max-width: 1280px;
+
+}
+
+.blurred-edges::before,
+.blurred-edges::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.blurred-edges::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.blurred-edges::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; 
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0) 0%, rgba(0, 0, 0, 1) 80%);
+}
+
+.kanit-medium {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }

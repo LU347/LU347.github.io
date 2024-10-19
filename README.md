@@ -1,10 +1,10 @@
 # My Portfolio 🚧 👷‍♀️ WIP
 
-I recreated my portfolio using Vite, React, TypeScript, and TailwindCSS.
+I recently remade my portfolio using Vite, React.js, TypeScript and Tailwind CSS.
 
-I left the project section blank for now, since most of them were small nor from course projects.
+I left the project page blank for now since most of them were small nor course projects.
 
-I am planning on building more complex projects and showcasing them here.
+I am planning on developing more complex projects and would showcase it here.
 
 ## Looking for Feedback 📚
 
