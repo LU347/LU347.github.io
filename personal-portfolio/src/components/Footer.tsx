@@ -1,3 +1,4 @@
+//Footer
 
 function Footer() {
     const FooterLink = ({ children }: any) => {
