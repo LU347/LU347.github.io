@@ -15,7 +15,7 @@ function About() {
         <CardContainer />
       </div>
       <div className="h-1/2 w-3/4 flex justify-center items-center flex-col text-center m-auto">
-        <div className="m-4 p-8 h-full text-md lg:text-2xl grid gap-2 text-ellipsis overflow-y-auto text-slate-300 font-sans font-thin">
+        <div className="m-4 p-8 h-full text-md lg:text-2xl grid gap-2 text-ellipsis overflow-auto text-slate-300 font-sans font-thin">
           <Paragraph>
             <SuperStrong>From an early age, technology has always fascinated me</SuperStrong>—whether it was playing Super Mario on my Game Boy or diving into flash games online. After moving to the United States, my passion for computers truly ignited when my family gifted me a small laptop, opening up a world of possibilities.
           </Paragraph>
