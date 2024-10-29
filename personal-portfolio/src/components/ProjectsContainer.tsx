@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { projectData } from "../lib/projectData";
+import { projectData } from "../lib/data";
 
 function ProjectsContainer() {
     return (

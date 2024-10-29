@@ -2,7 +2,7 @@
 
 import Card from "./Card";
 
-import { aboutCardData } from "../lib/projectData";
+import { aboutCardData } from "../lib/data";
 
 function CardContainer() {
     return (
