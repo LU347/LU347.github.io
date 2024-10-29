@@ -2,7 +2,7 @@ import Spline from '@splinetool/react-spline';
 import TypeIt from "typeit-react";
 
 function Intro() {
-  
+
   return (
     <section className="flex h-screen pb-8 relative flex flex-center justify-center items-center">
       <div className="h-full w-full flex flex-center items-center justify-center font-sans justify-start text-start m-8 font-thin">
@@ -15,13 +15,13 @@ function Intro() {
               loop: true,
             }}
             className="m-2 text-3xl lg:text-4xl text-slate-200"
-            >
+          >
             an aspiring software engineer
           </TypeIt>
         </div>
       </div>
-      <div className="h-screen absolute w-full z-0 opacity-60 blurred-edges">
-        <Spline scene="https://prod.spline.design/IVXSBx-yfu2q3axz/scene.splinecode" />
+      <div className="h-3/4 w-screen absolute w-3/4 z-0 opacity-60 blurred-edges">
+          <Spline scene="https://prod.spline.design/IVXSBx-yfu2q3axz/scene.splinecode" />
       </div>
     </section>
   )

@@ -3,20 +3,20 @@ import { projectData } from "../lib/projectData";
 
 function ProjectsContainer() {
     return (
-        <div className="grid grid-cols-1 gap-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-3/4 h-1/2">
             {
                 projectData.map((data) => (
                     <ProjectCard
+                        key={data.id}
                         title={data.title}
                         description={data.description}
-                        imageURL={data.imageURL}
                         github={data.github}
                         liveLink={data.liveLink}
                     >
                     </ProjectCard>
                 ))
             }
-        </div>
+        </div>    
     )
 }
 

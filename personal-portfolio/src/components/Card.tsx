@@ -18,10 +18,11 @@ function Card(props: any) {
     
     return (
         <div
-            className="m-[10px] p-[10px] pb-[25px] lg:m-[20px] lg:p-[15px] h-full w-1/2 lg:pb-[60px]"
+            key={props.id}
+            className="m-[0.625rem] p-[0.625rem] pb-[1.563rem] lg:m-[1.25rem] lg:p-[0.938rem] h-full w-auto lg:pb-[3.75]"
             style={cardStyle}
         >
-            <img className="pointer-events-none select-none" src={props.imageURL} height="30vh" width="auto" alt="Card Image"></img>
+            <img className="pointer-events-none select-none" src={props.imageURL} loading="lazy" height="250px" width="250px" alt="Card Image"></img>
         </div>
     )
 }
