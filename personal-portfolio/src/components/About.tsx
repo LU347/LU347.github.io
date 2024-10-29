@@ -11,10 +11,10 @@ function About() {
 
   return (
     <section id="about" className="h-screen flex flex-col w-full pt-20 p-16 m-auto">
-      <div className="text-center pb-12 m-8 text-6xl font-serif font-medium">
+      <div className="text-center pb-12 m-8 text-3xl 2xl:text-6xl font-serif font-medium">
         <h1>About Me</h1>
       </div>
-      <div className="h-2/4 hidden lg:block overflow-clip">
+      <div className="hidden h-1/4 2xl:h-2/4 2xl:block">
         <CardContainer />
       </div>
       <div className="h-auto lg:h-2/3 w-3/4 flex justify-center items-center flex-col text-center m-auto overflow-auto">

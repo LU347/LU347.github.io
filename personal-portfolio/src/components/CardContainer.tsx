@@ -6,7 +6,7 @@ import { aboutCardData } from "../lib/data";
 
 function CardContainer() {
     return (
-        <div className="flex flex-row justify-center align-center m-2 p-2">
+        <div className="h-full flex flex-row justify-center align-center m-2 p-2">
             {
                 aboutCardData.map((data) => (
                     <Card
