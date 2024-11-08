@@ -11,7 +11,7 @@ function About() {
 
   return (
     <section id="about" className="h-screen flex flex-col w-full pt-20 p-16 m-auto">
-      <div className="text-center pb-12 m-8 text-3xl 2xl:text-6xl font-serif font-medium">
+      <div className="text-center pb-12 m-8 text-4xl 2xl:text-6xl font-serif font-medium">
         <h1>About Me</h1>
       </div>
       <div className="hidden h-1/4 2xl:h-2/4 2xl:block">
