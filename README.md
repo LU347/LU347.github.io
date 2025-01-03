@@ -1,6 +1,6 @@
 # Portfolio Website
 
-## Technologies Used
+### Technologies Used
 
 * HTML
 * CSS
@@ -9,3 +9,5 @@
 * React.js
 * TailwindCSs
 * Vite
+
+_Deployed on __Vercel___
